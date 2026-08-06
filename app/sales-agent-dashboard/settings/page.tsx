@@ -63,8 +63,26 @@ const data = [
     { time: "10:45", value: 11640 },
     { time: "12 pm", value: 11680 },
 ]
+interface CustomTooltipProps {
+    active?: boolean;
+    payload?: Array<{ value?: number }>;
+    label?: string;
+}
 
-const CustomTooltip = ({ active, payload }: TooltipProps<ValueType, NameType>) => {
+// const CustomTooltip = ({ active, payload }: TooltipProps<ValueType, NameType>) => {
+//     if (active && payload && payload.length > 0) {
+//         const val = payload[0]?.value;
+//         return (
+//             <div className='bg-[#1df08e] p-4 rounded-xl shadow-lg border-none text-white'>
+//                 <p className='text-[10px] font-bold opacity-80'>Top Target: Jan 30</p>
+//                 <p className='text-xl font-bold'>N{val ? val.toLocaleString() : '0'}</p>
+//             </div>
+//         )
+//     }
+//     return null;
+// }
+
+const CustomTooltip = ({ active, payload }: CustomTooltipProps) => {
     if (active && payload && payload.length > 0) {
         const val = payload[0]?.value;
         return (
@@ -72,11 +90,10 @@ const CustomTooltip = ({ active, payload }: TooltipProps<ValueType, NameType>) =
                 <p className='text-[10px] font-bold opacity-80'>Top Target: Jan 30</p>
                 <p className='text-xl font-bold'>N{val ? val.toLocaleString() : '0'}</p>
             </div>
-        )
+        );
     }
     return null;
-}
-
+};
 type Props = {}
 
 const Page = (props: Props) => {
