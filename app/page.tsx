@@ -218,11 +218,11 @@ export default function Home() {
         </div>
 
         {/* Roles and Responsibilities Link */}
-        <div className="w-full text-center">
+        {/* <div className="w-full text-center">
            <Link href="/roles-info" className="text-majorgreen underline font-medium hover:opacity-80 transition-opacity">
              View Role Responsibilities and Details
            </Link>
-        </div>
+        </div> */}
         
         {/* Action Buttons Section */}
         <div className="flex items-center gap-5 w-full">

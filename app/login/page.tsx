@@ -149,7 +149,7 @@ const LoginPage = () => {
             // Note: For MVP, localStorage works, but see the security note below for production.
             localStorage.setItem('token', response.data.token)
             localStorage.setItem('user', JSON.stringify(response.data.agent.id))
-            alert(response.data.agent.referralCode)
+            // alert(response.data.agent.referralCode)
             localStorage.setItem('agentId', response.data.agent.referralCode)
 
             // Redirect based on successful login
