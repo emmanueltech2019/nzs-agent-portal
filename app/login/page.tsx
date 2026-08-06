@@ -161,6 +161,7 @@ const LoginPage = () => {
             } 
             
         } catch (err: any) {
+            
             setError(err.message || 'A network error occurred. Please try again later.')
         } finally {
             setIsLoading(false)
