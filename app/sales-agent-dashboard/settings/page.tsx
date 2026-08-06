@@ -193,19 +193,19 @@ if (!mounted) {
                         </div>
                         <div className="grid grid-cols-3">
                             <div className="flex flex-col border-r border-lightgray p-2">
-                                <p className="text-3xl font-bold italic">39</p>
+                                <p className="text-3xl font-bold italic">__</p>
                                 <p>Vendors</p>
                             </div>
                             <div className="flex flex-col border-r border-lightgray p-2">
-                                <p className="text-3xl font-bold italic">+300k</p>
+                                <p className="text-3xl font-bold italic">+0</p>
                                 <p>In Earnings</p>
                             </div>
                             <div className="flex flex-col border-r border-lightgray p-2">
-                                <p className="text-3xl font-bold italic">105</p>
+                                <p className="text-3xl font-bold italic">+0</p>
                                 <p>Onboardings</p>
                             </div>
                         </div>
-                        <Button className="tracking-widest p-5" text="APPLY FOR PROMOTION"/>
+                        <Button className="tracking-widest p-5" disabled text="APPLY FOR PROMOTION"/>
                     </GlobalContainer>
                 </div>
             ) : active === "My Feed" ? (
@@ -302,7 +302,7 @@ if (!mounted) {
                                                             <Star size={20} strokeWidth={1}/>
                                                             <div className="flex flex-col gap-1">
                                                                 <p className="md:text-md text-sm">Vendors Reached</p>
-                                                                <span className="text-sm text-majorgray">200</span>
+                                                                <span className="text-sm text-majorgray">0</span>
                                                             </div>
                                                         </div>
                                                         <div className="flex gap-3 items-start hover:bg-lightgray px-4 py-2 cursor-pointer">
@@ -316,7 +316,7 @@ if (!mounted) {
                                                             <Star size={20} strokeWidth={1}/>
                                                             <div className="flex flex-col gap-1">
                                                                 <p className="md:text-md text-sm">Vendors Left</p>
-                                                                <span className="text-sm text-majorgray">800</span>
+                                                                <span className="text-sm text-majorgray">1,000</span>
                                                             </div>
                                                         </div>
                                                     </div>
