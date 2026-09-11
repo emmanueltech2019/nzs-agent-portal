@@ -1666,7 +1666,7 @@ const SalesAgent = () => {
 
 type ReviewItemProps = {
   label: string;
-  value?: string;
+  value?: string | null
 };
 
 const ReviewItem = ({ label, value }: ReviewItemProps) => {
@@ -1685,7 +1685,7 @@ const ReviewItem = ({ label, value }: ReviewItemProps) => {
 
 type DocumentReviewCardProps = {
   label: string;
-  file?: File;
+  file?: File | null;
 };
 
 const DocumentReviewCard = ({
