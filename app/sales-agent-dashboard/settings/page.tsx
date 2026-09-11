@@ -151,7 +151,9 @@ const fullName = profileData
     ? `${profileData.firstName?.trim() || ""} ${
           profileData.lastName?.trim() || ""
       }`.trim()
-    : "No name";const [mounted, setMounted] = useState(false);
+    : "No name";
+    
+    const [mounted, setMounted] = useState(false);
 
 useEffect(() => {
     setMounted(true);
@@ -689,7 +691,7 @@ if (!mounted) {
                                         </div>
                                         <div className="md:w-1/2 w-full fixed left-1/2 -translate-x-1/2 md:p-5 p-3 bg-white flex flex-col gap-5 bottom-0 z-20">
                                             <label htmlFor='post-text' className="flex items-center gap-3 w-full">
-                                                <Plus className="text-majorgreen flex-shrink-0" size="{30}" strokeWidth={1}/>
+                                                <Plus className="text-majorgreen flex-shrink-0" size={30} strokeWidth={1}/>
                                                 <input id='post-text' type="text" placeholder='Type a message...' className='w-full outline-none bg-transparent' />
                                             </label>
                                             <button className='bg-majorgreen p-3 rounded-xl text-white w-full'>SEND POST</button>
