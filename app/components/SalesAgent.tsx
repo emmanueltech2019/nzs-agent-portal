@@ -427,7 +427,7 @@ if (!selectedAccountType) {
       formData.append("state", stateActive);
       formData.append("password", steps?.[0]?.password || "");
       formData.append("email", steps?.[0]?.email?.trim() || "");
-      formData.append("agentRoleType", accountTypeValue || "Sales Agent");
+      formData.append("agentRoleType","Sales Agent");
 
       // Step 2: Communication + referral
       formData.append("phone", steps?.[1]?.phone?.trim() || "");
