@@ -1588,14 +1588,18 @@ if (!selectedAccountType) {
                     }`.trim()}
                   />
 
-                  <ReviewItem
+                  {/* <ReviewItem
                     label="Account Type"
                     value={
                       accountTypeValue ||
                       (steps?.[2] as any)?.accountType ||
                       "Not selected"
                     }
-                  />
+                  /> */}
+                  <ReviewItem
+  label="Account Type"
+  value={accountTypeValue}
+/>
                 </div>
               </div>
 
