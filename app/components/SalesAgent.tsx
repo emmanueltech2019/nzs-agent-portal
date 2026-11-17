@@ -1677,7 +1677,32 @@ type ReviewItemProps = {
   value?: string | null
 };
 
+// const ReviewItem = ({ label, value }: ReviewItemProps) => {
+//   return (
+//     <div className="rounded-2xl border border-lightgray bg-white p-4">
+//       <p className="text-xs font-bold uppercase tracking-wider text-majorgray">
+//         {label}
+//       </p>
+
+//       <p className="mt-1.5 break-words text-sm font-semibold text-black">
+//         {value?.trim() || "Not provided"}
+//       </p>
+//     </div>
+//   );
+// };
+type ReviewItemProps = {
+  label: string;
+  value?: unknown;
+};
+
 const ReviewItem = ({ label, value }: ReviewItemProps) => {
+  const displayValue =
+    typeof value === "string"
+      ? value.trim()
+      : typeof value === "number"
+        ? String(value)
+        : "";
+
   return (
     <div className="rounded-2xl border border-lightgray bg-white p-4">
       <p className="text-xs font-bold uppercase tracking-wider text-majorgray">
@@ -1685,7 +1710,7 @@ const ReviewItem = ({ label, value }: ReviewItemProps) => {
       </p>
 
       <p className="mt-1.5 break-words text-sm font-semibold text-black">
-        {value?.trim() || "Not provided"}
+        {displayValue || "Not provided"}
       </p>
     </div>
   );
