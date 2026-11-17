@@ -1694,10 +1694,10 @@ type ReviewItemProps = {
 //     </div>
 //   );
 // };
-type ReviewItemProps = {
-  label: string;
-  value?: unknown;
-};
+// type ReviewItemProps = {
+//   label: string;
+//   value?: unknown;
+// };
 
 const ReviewItem = ({ label, value }: ReviewItemProps) => {
   const displayValue =
