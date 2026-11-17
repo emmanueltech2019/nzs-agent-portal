@@ -233,10 +233,18 @@ const SalesAgent = () => {
         return false;
       }
 
-      if (!accountTypeValue) {
-        showToast("error", "Please select your account type.");
-        return false;
-      }
+      // if (!accountTypeValue) {
+      //   showToast("error", "Please select your account type.");
+      //   return false;
+      // }
+      const selectedAccountType =
+  accountTypeValue ||
+  currentStep?.accountType;
+
+if (!selectedAccountType) {
+  showToast("error", "Please select your account type.");
+  return false;
+}
     }
 
     if (currentIndex === 3) {
